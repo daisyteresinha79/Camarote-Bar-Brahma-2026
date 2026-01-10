@@ -1,6 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <style>
+/* Header */
+.topo {
+    background-color: #b30000;
+    text-align: center;
+    padding: 25px 0 15px;
+}
+
+.logo {
+    max-width: 220px;
+}
+
+/* Barra de menu elegante */
+.menu-fixo {
+    position: fixed;
+    top: 110px;
+    width: 100%;
+    background-color: #b30000;
+    border-top: 1px solid #f5d27a;
+    border-bottom: 1px solid #f5d27a;
+    z-index: 1000;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 25px;
+}
+
+.menu a {
+    color: #f5d27a;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.menu a:hover {
+    opacity: 0.8;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #b30000;
+    border: 1px solid #f5d27a;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 220px;
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    color: #f5d27a;
+    font-size: 12px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Espaço para o menu fixo */
+body {
+    margin: 0;
+    padding-top: 160px;
+}
+</style>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>República do Pagodinho | Camarote Bar Brahma</title>
