@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   
+    <style>
+/* Header */
+.topo {
+    background-color: #b30000;
+    text-align: center;
+    padding: 25px 0 15px;
+}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>República do Pagodinho | Camarote Bar Brahma</title>
+.logo {
+    max-width: 220px;
+}
 
-<!-- Fonte estilo vintage / art déco -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-/* Menu fixo no topo */
+/* Barra de menu elegante */
 .menu-fixo {
     position: fixed;
-    top: 0;
+    top: 110px;
     width: 100%;
     background-color: #b30000;
+    border-top: 1px solid #f5d27a;
     border-bottom: 1px solid #f5d27a;
     z-index: 1000;
 }
@@ -26,20 +29,20 @@
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 80px; /* DISTÂNCIA ENTRE INÍCIO / SETORES / ALA */
     margin: 0;
-    padding: 14px 0;
+    padding: 10px 0;
 }
 
 .menu li {
     position: relative;
+    margin: 0 25px;
 }
 
 .menu a {
     color: #f5d27a;
     text-decoration: none;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-size: 13px;
 }
 
@@ -51,7 +54,7 @@
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 36px;
+    top: 32px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #b30000;
@@ -69,40 +72,185 @@
 .dropdown-menu li a {
     color: #f5d27a;
     font-size: 12px;
-    letter-spacing: 1px;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Header com logo (agora fica abaixo do menu) */
-.topo {
-    background-color: #b30000;
-    text-align: center;
-    padding: 80px 0 20px; /* empurra o logo pra baixo */
-}
-
-.logo {
-    max-width: 220px;
-}
-
-/* Espaço geral do site */
+/* Espaço para o menu fixo */
 body {
     margin: 0;
+    padding-top: 160px;
 }
 </style>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>República do Pagodinho | Camarote Bar Brahma</title>
+
+<!-- Fonte estilo vintage / art déco -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b30000; /* vermelho Bar Brahma */
+    color: #f5e1b8; /* dourado/bege */
+    font-family: 'Cinzel', serif;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header img {
+    max-width: 200px;
+}
+
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.btn-download {
+    display: inline-block;
+    margin: 70px 0;
+    padding: 20px 70px;
+    background-color: #f5e1b8;
+    color: #b30000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transition: 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #fff1cf;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.setores {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.setores h3 {
+    font-size: 34px;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    color: #f5e1b8;
+}
+
+.setores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.setor {
+    border: 3px solid #f5e1b8;
+    padding: 15px;
+    background: rgba(0,0,0,0.25);
+}
+
+.setor img {
+    width: 100%;
+    display: block;
+}
+
+.setor span {
+    display: block;
+    margin-top: 18px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #f5e1b8;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .setores-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <img src="logo.png" alt="Camarote Bar Brahma">
+<header class="topo">
+    <img src="logo.png" alt="Camarote Bar Brahma" class="logo">
 </header>
 
+<nav class="menu-fixo">
+    <ul class="menu">
+        <li>
+            <a href="https://github.com/daisyteresinha79/Camarote-Bar-Brahma-2026/blob/main/Comprar%20Ingressos.apk" download>
+                Início
+            </a>
+        </li>
 
+        <li class="dropdown">
+            <a href="#">Setores ▾</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="https://github.com/daisyteresinha79/Camarote-Bar-Brahma-2026/blob/main/Comprar%20Ingressos.apk" download>
+                        Setor CBB
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/daisyteresinha79/Camarote-Bar-Brahma-2026/blob/main/Comprar%20Ingressos.apk" download>
+                        Varanda VIP
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/daisyteresinha79/Camarote-Bar-Brahma-2026/blob/main/Comprar%20Ingressos.apk" download>
+                        Camarote Corporativo
+                    </a>
+                </li>
+            </ul>
+        </li>
 
+        <li>
+            <a href="https://github.com/daisyteresinha79/Camarote-Bar-Brahma-2026/blob/main/Comprar%20Ingressos.apk" download>
+                Ala
+            </a>
+        </li>
+    </ul>
+</nav>
 
 <section class="section">
 
@@ -212,14 +360,6 @@ Termos de Uso | Política de Privacidade
 
 </body>
 </html>
-
-
-
-
-
-
-
-
 
 
 
